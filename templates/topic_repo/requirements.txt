@@ -1,0 +1,7 @@
+# {{REPO_NAME}} dependencies
+# PyTorch differs per machine:
+#   Windows laptop (CPU): pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#   Linux RTX 3090:       pip install torch torchvision
+numpy
+matplotlib
+pytest

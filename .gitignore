@@ -1,0 +1,15 @@
+# Topic repos are separate git repos — never track them here
+projects/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.idea/
+
+# Data and outputs (should live inside topic repos anyway)
+data/
+outputs/
