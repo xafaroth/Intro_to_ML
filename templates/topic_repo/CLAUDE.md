@@ -6,15 +6,18 @@ Part of a personal ML learning path (hub: https://github.com/xafaroth/Intro_to_M
 with usernames, or secrets. Check notebook outputs. A `CLAUDE.local.md`, if present, takes priority and is never committed.
 
 ## Roles
-- **The learner writes the learning code** (models, losses, training loops, math). Claude Desktop tutors and reviews.
-- **Claude Code** handles organization, environment, data scripts, plotting/logging helpers, tests, and
-  explaining errors. It must **not** write or fix the concept being learned unless explicitly asked —
-  give hints and point at the line instead. Don't refactor the learner's code or swap it for library calls.
+- **The learner writes the learning code** (models, losses, training loops, math). The tutor — Claude
+  (ML Expertise project on claude.ai) — teaches and reviews by cloning this repo from GitHub.
+- **Claude Code** works on request only: autocompletes code and answers questions when asked, plus chores (environment, data scripts, tests, git).
+  It does not set direction or change the roadmap. It must **not** write or fix the concept being learned unless explicitly asked —
+  give hints and point at the line instead. Don't refactor the learner's code.
+- **No-library rule applies to the "By hand" part of a stage only.** The "With tools" part is meant to use libraries.
 
 ## Layout
-- `NN_stage_name/` — one folder per stage (`README.md`, `REVIEW.md`, code, `tests/`).
+- `NN_stage_name/` — one folder per stage (`README.md`, `REVIEW.md`, code, `results/`, `tests/`).
+- `NN_stage_name/results/` — **committed**: key plots (PNG), `metrics.json`, small logs for review.
 - `common/` — code reused across stages in this repo; code copied from other repos carries a header naming its source.
-- `data/`, `outputs/NN_stage_name/` — gitignored.
+- `data/`, `outputs/NN_stage_name/` — gitignored (checkpoints, bulk outputs).
 - Run from the repo root: `python NN_stage_name/script.py`.
 
 ## Environment
@@ -27,5 +30,6 @@ with usernames, or secrets. Check notebook outputs. A `CLAUDE.local.md`, if pres
 - Identity (local): `xafaroth` / `172051262+xafaroth@users.noreply.github.com`.
 - Commit messages prefixed with the stage: `[NN] message`. Commit/push only when asked.
 
-## Review handoff
-"Prep a review" → write `outputs/<stage>/review_bundle.md` (goals, code, run output, open questions) and give its full path.
+## Review workflow
+Learner saves key results to `NN_stage_name/results/`, commits and pushes, then asks the tutor to "review stage NN".
+Feedback is logged in the stage's `REVIEW.md`. No review bundles.

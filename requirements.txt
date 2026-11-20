@@ -1,13 +1,13 @@
-# Reference list. Each topic repo has its own requirements.txt; this is the base set for ml-foundations.
-# Base dependencies (stages 01–04)
+# Reference list. Each topic repo has its own requirements.txt; this is the base set for ml-foundations (stages 01–03).
 numpy
+pandas
 matplotlib
 scikit-learn
-pandas
+lightgbm
 jupyter
 pytest
 
-# Stage 05+ — PyTorch differs per machine:
+# PyTorch (needed from stage 01) differs per machine:
 #   Windows laptop (CPU): pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 #   Linux RTX 3090:       pip install torch torchvision   (default Linux wheels ship with CUDA)
-# Later stages (add when you get there): transformers, datasets, einops, tqdm
+# Later topics (add when you get there): timm, transformers, datasets, gymnasium, stable-baselines3, diffusers, peft

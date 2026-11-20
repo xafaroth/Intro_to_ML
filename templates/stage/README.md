@@ -14,13 +14,16 @@
 
 ## How to run
 ```bash
-python stages/NN_topic_name/<script>.py
+python NN_stage_name/<script>.py
 ```
 
 ## Results
+Key plots (PNG), `metrics.json` and small logs are committed in [`results/`](results/) for review.
+Checkpoints and bulk outputs go to the gitignored `outputs/NN_stage_name/`.
+
 | Experiment | Dataset | Machine | Metric | Value | Notes |
 |---|---|---|---|---|---|
 | | | laptop / 3090 | | | |
 
-## Open questions (for Claude Desktop)
+## Open questions (for the tutor)
 - 
