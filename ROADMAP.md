@@ -1,6 +1,7 @@
 # ML Learning Roadmap
 
 Status: ⬜ not started · 🟨 in progress · ✅ done
+Hub: https://github.com/xafaroth/Intro_to_ML
 Each **topic** is its own GitHub repo under https://github.com/xafaroth, cloned locally into `projects/<repo>/`.
 Each **stage** is a folder inside that repo: `projects/<repo>/NN_stage_name/`.
 
