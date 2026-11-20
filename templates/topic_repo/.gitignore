@@ -19,3 +19,8 @@ runs/
 *.pth
 *.ckpt
 *.safetensors
+
+# Local-only files (never commit)
+CLAUDE.local.md
+.env
+*.env

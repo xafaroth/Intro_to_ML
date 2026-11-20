@@ -13,3 +13,9 @@ venv/
 # Data and outputs (should live inside topic repos anyway)
 data/
 outputs/
+
+# Local-only files (never commit)
+CLAUDE.local.md
+.local/
+.env
+*.env

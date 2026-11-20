@@ -4,6 +4,11 @@ This is a **learning workspace**, not a product. The owner is working through ML
 binary classification to diffusion models and vision-language models (VLMs), writing the
 code by hand to learn it.
 
+## Public repos — keep them public-safe
+All repos are **public**. Never commit personal or employer information, machine hostnames/IPs/usernames,
+absolute paths containing usernames, or secrets. Check notebook outputs before committing.
+If a `CLAUDE.local.md` exists, its rules take priority — and it must never be committed.
+
 ## Roles (read this first)
 
 | Who | Role |
@@ -67,7 +72,8 @@ C:\PyProjects\Intro_to_ML\          # HUB repo → github.com/xafaroth/Intro_to_
   needs the learner's code from an earlier one (e.g. their attention block in `vlms`), **copy** it into
   that repo's `common/` with a header comment naming the source repo/stage. No cross-repo imports.
 - **Starting a new topic:** copy `templates/topic_repo/` → `projects/<topic-repo>/`, fill placeholders,
-  `git init -b main`, set the local identity (below), initial commit. Then the learner creates the empty
+  `git init -b main`, set the local identity (below), install the local pre-commit hook if `.local/hooks/` exists
+  (copy its files into the new repo's `.git/hooks/`), initial commit. Then the learner creates the empty
   GitHub repo (no README/license) and Claude Code adds `origin` = `https://github.com/xafaroth/<topic-repo>.git`
   and pushes. Update `ROADMAP.md` with the repo link.
 - **Starting a new stage:** copy `templates/stage/` → `projects/<topic-repo>/NN_stage_name/`, add a line to

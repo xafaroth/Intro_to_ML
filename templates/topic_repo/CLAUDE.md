@@ -2,6 +2,9 @@
 
 Part of a personal ML learning path (hub: https://github.com/xafaroth/Intro_to_ML — full rules in its CLAUDE.md).
 
+**Public repo:** never commit personal or employer info, machine hostnames/IPs/usernames, absolute paths
+with usernames, or secrets. Check notebook outputs. A `CLAUDE.local.md`, if present, takes priority and is never committed.
+
 ## Roles
 - **The learner writes the learning code** (models, losses, training loops, math). Claude Desktop tutors and reviews.
 - **Claude Code** handles organization, environment, data scripts, plotting/logging helpers, tests, and
