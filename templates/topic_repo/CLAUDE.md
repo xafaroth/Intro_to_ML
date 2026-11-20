@@ -21,7 +21,7 @@ with usernames, or secrets. Check notebook outputs. A `CLAUDE.local.md`, if pres
 - Run from the repo root: `python NN_stage_name/script.py`.
 
 ## Environment
-- venv at `.venv/`; deps in `requirements.txt`.
+- Laptop: shared venv at the hub root (`../../.venv/`); Linux box: this repo's own `.venv/`. Deps in `requirements.txt`.
 - Windows laptop = CPU only (CPU PyTorch build). Linux box = RTX 3090 (CUDA build).
 - Device via `torch.device("cuda" if torch.cuda.is_available() else "cpu")`; `pathlib` relative paths;
   GPU scripts take `--smoke`; long runs in `tmux` with periodic checkpoints.

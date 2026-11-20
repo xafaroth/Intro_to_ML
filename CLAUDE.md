@@ -118,7 +118,10 @@ Before a push meant for review, check that `results/` is up to date, contains no
 ## Environment
 
 - **OS:** Windows 11. Shell commands may be PowerShell or Git Bash; use paths that work in both.
-- **Python:** 3.14 (`py -3.14`). One venv per topic repo at `<topic-repo>/.venv/`.
+- **Python:** 3.14 (`py -3.14`). **Laptop: one shared venv for all topic repos** at the hub root `.venv/`
+  (PyCharm uses it for everything under `projects/`). Install each topic's `requirements.txt` into it.
+  Give a topic its own `.venv/` only if its dependencies clash with the shared one.
+  **Linux GPU box:** one venv per cloned topic repo at `<topic-repo>/.venv/`.
   If a package has no 3.14 wheels yet, flag it rather than silently downgrading; a 3.12 venv is the fallback.
 - **Hardware — two machines:**
   - **Windows laptop (this machine):** CPU + integrated AMD Radeon 860M, 31 GB RAM, **no CUDA GPU**.
